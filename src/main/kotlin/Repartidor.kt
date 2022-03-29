@@ -10,11 +10,13 @@ class Repartidor: Empleado {
 
     }
     override fun plus(){
-        if (this.edad>25&&this.zona=="3"){
+        if (this.edad<25&&this.zona=="3"){
             println("Al repartidor: "+super.nombre+" si se le aplica la comision")
+            super.salario+=super.plus
+            println("Su nuevo salario es de: "+super.salario+"\n")
         }
         else{
-            println("Al repartidor: "+super.nombre+" no se le aplica la comision")
+            println("Al repartidor: "+super.nombre+" no se le aplica la comision"+"\n")
         }
     }
 }
